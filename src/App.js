@@ -6,12 +6,10 @@ import "./App.css"
 function App() {
   return (
     <div className="App">
-      <div className="body">
-        <List />
-        {/*list of all */}
-        <List />
-        {/*list of starred */}
-      </div>
+      <List />
+      {/*list of all */}
+      <List />
+      {/*list of starred */}
     </div>
   )
 }
