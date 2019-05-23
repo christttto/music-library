@@ -25,3 +25,5 @@ Each column will have Title (all,star)
 In front of each listing, depending on the column, it will have icon. (regular star for star column, empty star for all column)
 If the empty star of all column is clicked, the song will be added to the star list.
 The all list should have a search bar, to filter the list.
+
+https://www.figma.com/file/cN9Nl2mxXK0ILN2Q9TzIBntr/Music-library?node-id=0%3A1
