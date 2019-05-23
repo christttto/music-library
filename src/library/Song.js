@@ -1,12 +1,12 @@
 import React from "react"
 
-function Song() {
+function Song(props) {
   return (
     <div className="all-list-song">
       individual song
       <span className="star">empty star</span>
-      <span className="Cover">album cover</span>
-      <span className="text">song name, artist name, album name</span>
+      <span className="album image">{/*props.image*/}</span>
+      <span className="text">{/**props.name */}</span>
     </div>
   )
 }

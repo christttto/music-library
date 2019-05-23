@@ -5,15 +5,18 @@ function List(props) {
   //if json is empty, render empty
   //if all, show empty star next to it
   //if star, show yellow star
+
   return (
     <span className="outside">
       list starts here
       <div className="all-search">searchbar</div>
       <div className="all-list">
-        this is list
-        <Song />
-        <Song />
-        <Song />
+        {console.log("list here")}
+        {console.log(props)}
+
+        {props.tracks.map(track => {
+          return <Song song={track} />
+        })}
       </div>
     </span>
   )

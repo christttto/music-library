@@ -30,11 +30,13 @@ class App extends Component {
   render() {
     return (
       <div className="App">
-        <List tracks={this.state.tracksJson.tracks} />
+        {console.log("this is what isbeing put in")}
+        {console.log(this.state.tracksJson)}
+        <List tracks={this.state.tracksJson} />
         {/*list of all, needs parameter to receive the tracks
         this.state.tracksJson.tracks.track
          */}
-        <List tracks={this.state.starred} />
+
         {/*list of starred, parameter set to starred 
         the starred will have same format as track: Array[100]
         */}
