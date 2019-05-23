@@ -1,6 +1,6 @@
 import React, { Component } from "react"
 import Song from "./Song"
-function List() {
+function List(props) {
   //needs to fetch json
   //if json is empty, render empty
   //if all, show empty star next to it
