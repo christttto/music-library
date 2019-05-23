@@ -27,3 +27,5 @@ If the empty star of all column is clicked, the song will be added to the star l
 The all list should have a search bar, to filter the list.
 
 https://www.figma.com/file/cN9Nl2mxXK0ILN2Q9TzIBntr/Music-library?node-id=0%3A1
+
+<iframe style="border: none;" width="800" height="450" src="https://www.figma.com/embed?embed_host=share&url=https%3A%2F%2Fwww.figma.com%2Ffile%2FcN9Nl2mxXK0ILN2Q9TzIBntr%2FMusic-library%3Fnode-id%3D0%253A1" allowfullscreen></iframe>
