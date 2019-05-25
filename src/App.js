@@ -1,6 +1,5 @@
 import React, { Component } from "react"
 import List from "./library/List"
-import logo from "./logo.svg"
 import "./App.css"
 
 import tracks from "./data/tracks.json"
@@ -37,14 +36,14 @@ class App extends Component {
       <div className="App">
         App.js is here
         {console.log("this is what isbeing put in")}
-        {console.log(this.state.tracksJson)}
+        {console.log(this.state.tracksJson.tracks)}
         {console.log("looking at the file version")}
         {console.log(tracks)}
+        <List tracksJson={tracks.track} />
         {tracks.track.map((t, index) => {
           return <h1>{t.name}</h1>
         })}
         <div>search bar</div>
-        <List tracksJson={this.state.tracksJson} />
       </div>
     )
   }

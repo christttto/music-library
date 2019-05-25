@@ -12,7 +12,9 @@ function List(props) {
       list starts here
       {console.log("inside List")}
       {console.log(props)}
-      <div className="all-search">searchbar</div>
+      {props.tracksJson.map((t, index) => {
+        return <h1>{t.name}</h1>
+      })}
     </div>
   )
 }
