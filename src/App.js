@@ -13,7 +13,7 @@ class App extends Component {
       tracksJsonFile: {},
       //arrays of songid
       all: [],
-      starred: []
+      star: []
     }
   }
   //bringing json
@@ -39,10 +39,10 @@ class App extends Component {
         {console.log(this.state.tracksJson.tracks)}
         {console.log("looking at the file version")}
         {console.log(tracks)}
-        <List tracksJson={tracks.track} />
-        {tracks.track.map((t, index) => {
-          return <h1>{t.name}</h1>
-        })}
+        <div>
+          <List tracksJson={tracks.track} star={this.star} />
+          <List tracksJson={tracks.track} star={this.star} />
+        </div>
         <div>search bar</div>
       </div>
     )

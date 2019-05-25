@@ -1,6 +1,6 @@
 import React, { Component } from "react"
 import Song from "./Song"
-
+import "../App.css"
 function List(props) {
   //needs to fetch json
   //if json is empty, render empty
@@ -13,7 +13,7 @@ function List(props) {
       {console.log("inside List")}
       {console.log(props)}
       {props.tracksJson.map((t, index) => {
-        return <h1>{t.name}</h1>
+        return <Song track={t} />
       })}
     </div>
   )
