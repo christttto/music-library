@@ -40,12 +40,12 @@ class App extends Component {
         {console.log("looking at the file version")}
         {console.log(tracks)}
         <div>
-          <span className="List">
+          <div className="List">
             <List tracksJson={tracks.track} star={this.star} />
-          </span>
-          <span className="List">
+          </div>
+          <div className="List">
             <List tracksJson={tracks.track} star={this.star} />
-          </span>
+          </div>
         </div>
         <div>search bar</div>
       </div>

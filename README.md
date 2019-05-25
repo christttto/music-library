@@ -27,3 +27,9 @@ If the empty star of all column is clicked, the song will be added to the star l
 The all list should have a search bar, to filter the list.
 
 https://www.figma.com/file/cN9Nl2mxXK0ILN2Q9TzIBntr/Music-library?node-id=0%3A1
+
+1. make two lists horizontal
+2. make star button, be able to add muid to state.star
+3. make unstar ability, remove the value from state.star
+
+4. search function
