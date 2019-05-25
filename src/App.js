@@ -7,10 +7,14 @@ class App extends Component {
   constructor() {
     super()
     this.state = {
+      //store json
       tracksJson: {},
-      starred: {}
+      //arrays of songid
+      all: [],
+      starred: []
     }
   }
+  //bringing json
   componentDidMount() {
     //use fetch, promise
     //fetch music here, put it into state
@@ -24,22 +28,14 @@ class App extends Component {
         })
       })
   }
-  //needs handle change when star pushed
-  //json is added to our starred state
-  //which will re-render the component
   render() {
     return (
       <div className="App">
+        App.js is here
         {console.log("this is what isbeing put in")}
         {console.log(this.state.tracksJson)}
-        <List tracks={this.state.tracksJson} />
-        {/*list of all, needs parameter to receive the tracks
-        this.state.tracksJson.tracks.track
-         */}
-
-        {/*list of starred, parameter set to starred 
-        the starred will have same format as track: Array[100]
-        */}
+        <div>search bar</div>
+        <List tracksJson={this.state.tracksJson} />
       </div>
     )
   }

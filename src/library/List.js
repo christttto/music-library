@@ -7,18 +7,12 @@ function List(props) {
   //if star, show yellow star
 
   return (
-    <span className="outside">
+    <div>
       list starts here
+      {console.log("inside List")}
+      {console.log(props)}
       <div className="all-search">searchbar</div>
-      <div className="all-list">
-        {console.log("list here")}
-        {console.log(props)}
-
-        {props.tracks.map(track => {
-          return <Song song={track} />
-        })}
-      </div>
-    </span>
+    </div>
   )
 }
 
