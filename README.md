@@ -28,10 +28,15 @@ The all list should have a search bar, to filter the list.
 
 https://www.figma.com/file/cN9Nl2mxXK0ILN2Q9TzIBntr/Music-library?node-id=0%3A1
 
-1. make two lists horizontal
-2. make star button, be able to add muid to state.star
-3. make unstar ability, remove the value from state.star
+### 1 make two lists horizontal
 
-4. search function
+### 2 make star button, be able to add url to state.star
 
-5. json call GET
+star button made.  
+make on click, on change. Try to console out the url first.
+
+### 3 make unstar ability, remove the value from state.star
+
+### 4 search function
+
+### 5 json call GET

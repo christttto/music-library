@@ -35,6 +35,7 @@ class App extends Component {
     return (
       <div className="App">
         App.js is here
+        <div>search should be here</div>
         <div>
           <span className="List">
             <List tracksJson={tracks.track} star={this.star} />

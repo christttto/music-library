@@ -6,6 +6,9 @@ div {
   margin: 0;
   padding: 0;
 }
+.star {
+  display: inline;
+}
 
 .track-name {
   color: brown;
