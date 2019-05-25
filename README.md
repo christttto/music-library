@@ -33,3 +33,5 @@ https://www.figma.com/file/cN9Nl2mxXK0ILN2Q9TzIBntr/Music-library?node-id=0%3A1
 3. make unstar ability, remove the value from state.star
 
 4. search function
+
+5. json call GET

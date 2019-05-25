@@ -16,6 +16,7 @@ function Song(props) {
       </span>
       <span className="track-name">{props.track.name} - </span>
       <span className="text">{props.track.artist.name}</span>
+      <div className="text">{props.track.artist.url}</div>
     </div>
   )
 }
