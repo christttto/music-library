@@ -3,12 +3,15 @@ import List from "./library/List"
 import logo from "./logo.svg"
 import "./App.css"
 
+import tracks from "./data/tracks.json"
+
 class App extends Component {
   constructor() {
     super()
     this.state = {
       //store json
       tracksJson: {},
+      tracksJsonFile: {},
       //arrays of songid
       all: [],
       starred: []
@@ -27,6 +30,7 @@ class App extends Component {
           tracksJson: data
         })
       })
+    this.setState({ tracksJsonFile: tracks })
   }
   render() {
     return (
@@ -34,6 +38,11 @@ class App extends Component {
         App.js is here
         {console.log("this is what isbeing put in")}
         {console.log(this.state.tracksJson)}
+        {console.log("looking at the file version")}
+        {console.log(tracks)}
+        {tracks.track.map((t, index) => {
+          return <h1>{t.name}</h1>
+        })}
         <div>search bar</div>
         <List tracksJson={this.state.tracksJson} />
       </div>
