@@ -35,10 +35,6 @@ class App extends Component {
     return (
       <div className="App">
         App.js is here
-        {console.log("this is what isbeing put in")}
-        {console.log(this.state.tracksJson.tracks)}
-        {console.log("looking at the file version")}
-        {console.log(tracks)}
         <div>
           <span className="List">
             <List tracksJson={tracks.track} star={this.star} />

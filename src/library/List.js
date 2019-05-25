@@ -11,8 +11,6 @@ function List(props) {
   return (
     <div>
       list starts here
-      {console.log("inside List")}
-      {console.log(props)}
       {props.tracksJson.map((t, index) => {
         return <Song track={t} key={index} />
       })}
