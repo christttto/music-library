@@ -1,6 +1,7 @@
 import React, { Component } from "react"
 import List from "./library/List"
 import ListStar from "./library/ListStar"
+import Search from "./library/Search"
 import "./App.css"
 
 import tracks from "./data/tracks.json"
@@ -12,8 +13,9 @@ class App extends Component {
       //store json
       tracksJson: {},
       tracksJsonFile: {},
-      //arrays of songid
-      all: [],
+
+      //keyword used for
+      filter: "",
       star: [
         "https://www.last.fm/music/Ariana+Grande/_/7+rings",
         "https://www.last.fm/music/Ariana+Grande/_/Thank+U,+Next"
@@ -46,22 +48,22 @@ class App extends Component {
       this.setState(prevState => {
         star: prevState.star.splice(index, 1)
       })
-      console.log(this.state.star)
     } else {
       console.log("adding to star")
       this.setState({
         star: this.state.star.concat([myUrl])
       })
-      console.log(this.state.star)
     }
+    console.log(this.state.star)
   }
   render() {
     return (
       <div className="App">
         App.js is here
-        <div>search should be here</div>
+        <Search />
         <div>
           <span className="List">
+            {/**filter */}
             <List
               tracksJson={tracks.track}
               star={this.state.star}
@@ -69,6 +71,7 @@ class App extends Component {
             />
           </span>
           <span className="List">
+            {/**filter */}
             <ListStar
               tracksJson={tracks.track}
               star={this.state.star}
