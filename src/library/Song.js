@@ -5,20 +5,20 @@ function Song(props) {
   let myValue = 0 //depends on the original value
   const rateChange = newRate => {
     myValue === 0 ? (myValue = 1) : (myValue = 0)
-    console.log(myValue)
+    console.log(newRate)
+    //props.handleChange
     return myValue
   }
   const isStar = () => {
     if (props.star.includes(props.track.url)) {
       return 1
     } else {
+      console.log("not a star")
       return 0
     }
   }
-
-  return (
-    <div className="all-list-song">
-      {/**onChange={} is to reflect change, value={} should be changed */}
+  function reactStars() {
+    return (
       <ReactStars
         className="star"
         count={1}
@@ -30,7 +30,25 @@ function Song(props) {
           rateChange(newRate)
         }}
       />
-
+    )
+  }
+  function myStar() {
+    if (props.star.includes(props.track.url)) {
+      return {
+        color: "yellow"
+      }
+    } else {
+      return {
+        color: "grey"
+      }
+    }
+  }
+  return (
+    <div className="all-list-song">
+      {/**onChange={} is to reflect change, value={} should be changed */}
+      <div className="star" style={myStar()} onClick={}>
+        ★
+      </div>
       <span className="track-name">{props.track.name} - </span>
       <span className="text">{props.track.artist.name}</span>
       <div className="text">{props.track.url}</div>

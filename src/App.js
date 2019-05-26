@@ -13,7 +13,7 @@ class App extends Component {
       tracksJsonFile: {},
       //arrays of songid
       all: [],
-      star: []
+      star: ["https://www.last.fm/music/Ariana+Grande/_/7+rings"]
     }
   }
   //bringing json
@@ -31,6 +31,9 @@ class App extends Component {
       })
     this.setState({ tracksJsonFile: tracks })
   }
+  handleChange() {
+    console.log("called handlechange at app")
+  }
   render() {
     return (
       <div className="App">
@@ -38,10 +41,10 @@ class App extends Component {
         <div>search should be here</div>
         <div>
           <span className="List">
-            <List tracksJson={tracks.track} star={this.star} />
+            <List tracksJson={tracks.track} star={this.state.star} />
           </span>
           <span className="List">
-            <List tracksJson={tracks.track} star={this.star} />
+            <List tracksJson={tracks.track} star={this.state.star} />
           </span>
         </div>
         <div>search bar</div>
