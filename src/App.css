@@ -6,6 +6,9 @@ div {
   margin: 0;
   padding: 0;
 }
+span {
+  vertical-align: top;
+}
 .star {
   display: inline;
 }

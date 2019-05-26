@@ -48,14 +48,14 @@ function Song(props) {
   }
   return (
     <div className="all-list-song">
-      {/**onChange={} is to reflect change, value={} should be changed */}
-      {/**need to reflect the change right away */}
       <div
         className="star"
         style={myStar()}
         onClick={() => {
-          myClick(props.track.url)
+          //myClick(props.track.url)
+          //here, after unstar, need to re-assign style value
           props.handleChange(props.track.url)
+          console.log("please")
         }}
       >
         ★

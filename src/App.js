@@ -1,5 +1,6 @@
 import React, { Component } from "react"
 import List from "./library/List"
+import ListStar from "./library/ListStar"
 import "./App.css"
 
 import tracks from "./data/tracks.json"
@@ -68,7 +69,7 @@ class App extends Component {
             />
           </span>
           <span className="List">
-            <List
+            <ListStar
               tracksJson={tracks.track}
               star={this.state.star}
               handleChange={this.handleChange}
