@@ -49,6 +49,7 @@ function Song(props) {
   return (
     <div className="all-list-song">
       {/**onChange={} is to reflect change, value={} should be changed */}
+      {/**need to reflect the change right away */}
       <div
         className="star"
         style={myStar()}
