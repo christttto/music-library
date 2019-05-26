@@ -13,8 +13,12 @@ class App extends Component {
       tracksJsonFile: {},
       //arrays of songid
       all: [],
-      star: ["https://www.last.fm/music/Ariana+Grande/_/7+rings"]
+      star: [
+        "https://www.last.fm/music/Ariana+Grande/_/7+rings",
+        "https://www.last.fm/music/Ariana+Grande/_/Thank+U,+Next"
+      ]
     }
+    this.handleChange = this.handleChange.bind(this)
   }
   //bringing json
   componentDidMount() {
@@ -31,8 +35,24 @@ class App extends Component {
       })
     this.setState({ tracksJsonFile: tracks })
   }
-  handleChange() {
-    console.log("called handlechange at app")
+  handleChange(myUrl) {
+    console.log("app handlechange")
+    console.log(myUrl)
+    let index = this.state.star.indexOf(myUrl)
+    if (index > -1) {
+      //myUrl exists
+      console.log("removing from star")
+      this.setState(prevState => {
+        star: prevState.star.splice(index, 1)
+      })
+      console.log(this.state.star)
+    } else {
+      console.log("adding to star")
+      this.setState({
+        star: this.state.star.concat([myUrl])
+      })
+      console.log(this.state.star)
+    }
   }
   render() {
     return (
@@ -41,10 +61,18 @@ class App extends Component {
         <div>search should be here</div>
         <div>
           <span className="List">
-            <List tracksJson={tracks.track} star={this.state.star} />
+            <List
+              tracksJson={tracks.track}
+              star={this.state.star}
+              handleChange={this.handleChange}
+            />
           </span>
           <span className="List">
-            <List tracksJson={tracks.track} star={this.state.star} />
+            <List
+              tracksJson={tracks.track}
+              star={this.state.star}
+              handleChange={this.handleChange}
+            />
           </span>
         </div>
         <div>search bar</div>
