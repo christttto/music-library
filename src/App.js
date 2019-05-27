@@ -37,23 +37,44 @@ class App extends Component {
       })
     this.setState({ tracksJsonFile: tracks })
   }
+  // handleStar(myUrl) {
+  //   console.log("app handlechange")
+  //   console.log(myUrl)
+  //   let index = this.state.star.indexOf(myUrl)
+  //   if (index > -1) {
+  //     //myUrl exists
+  //     console.log("removing from star")
+  //     this.setState(prevState => {
+  //       star: this.state.star.splice(index, 1)
+  //     })
+  //   } else {
+  //     console.log("adding to star")
+  //     this.setState({
+  //       star: this.state.star.concat([myUrl])
+  //     })
+  //   }
+  //   console.log(this.state.star)
+  // }
   handleStar(myUrl) {
-    console.log("app handlechange")
-    console.log(myUrl)
-    let index = this.state.star.indexOf(myUrl)
-    if (index > -1) {
-      //myUrl exists
-      console.log("removing from star")
-      this.setState(prevState => {
-        star: this.state.star.splice(index, 1)
-      })
-    } else {
-      console.log("adding to star")
-      this.setState({
-        star: this.state.star.concat([myUrl])
-      })
-    }
-    console.log(this.state.star)
+    this.setState(prevState => {
+      let index = prevState.star.indexOf(myUrl)
+      if (index > -1) {
+        console.log("remove")
+        // return {
+        //   star: prevState.star
+        //     .slice(0, i)
+        //     .concat(prevState.star.slice(i + 1, prevState.star.length))
+        // }
+        return {
+          star: prevState.star.filter((_, i) => i !== index)
+        }
+      } else {
+        console.log("add")
+        return {
+          star: prevState.star.concat([myUrl])
+        }
+      }
+    })
   }
   handleSubmit(event) {
     const { name, value } = event.target
