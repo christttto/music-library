@@ -1,0 +1,15 @@
+{
+  "files": {
+    "main.css": "/music-library/static/css/main.e75b7c2b.chunk.css",
+    "main.js": "/music-library/static/js/main.0fca235f.chunk.js",
+    "main.js.map": "/music-library/static/js/main.0fca235f.chunk.js.map",
+    "runtime~main.js": "/music-library/static/js/runtime~main.124e3dac.js",
+    "runtime~main.js.map": "/music-library/static/js/runtime~main.124e3dac.js.map",
+    "static/js/2.d8fb2631.chunk.js": "/music-library/static/js/2.d8fb2631.chunk.js",
+    "static/js/2.d8fb2631.chunk.js.map": "/music-library/static/js/2.d8fb2631.chunk.js.map",
+    "index.html": "/music-library/index.html",
+    "precache-manifest.bdf938350c441db7f253ad3fcf56836f.js": "/music-library/precache-manifest.bdf938350c441db7f253ad3fcf56836f.js",
+    "service-worker.js": "/music-library/service-worker.js",
+    "static/css/main.e75b7c2b.chunk.css.map": "/music-library/static/css/main.e75b7c2b.chunk.css.map"
+  }
+}
