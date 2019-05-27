@@ -20,7 +20,6 @@ class App extends Component {
     }
     this.handleStar = this.handleStar.bind(this)
     this.handleSubmit = this.handleSubmit.bind(this)
-    //this.handleChange = this.handleChange.bind(this)
   }
   //bringing json
   componentDidMount() {
@@ -37,34 +36,11 @@ class App extends Component {
       })
     this.setState({ tracksJsonFile: tracks })
   }
-  // handleStar(myUrl) {
-  //   console.log("app handlechange")
-  //   console.log(myUrl)
-  //   let index = this.state.star.indexOf(myUrl)
-  //   if (index > -1) {
-  //     //myUrl exists
-  //     console.log("removing from star")
-  //     this.setState(prevState => {
-  //       star: this.state.star.splice(index, 1)
-  //     })
-  //   } else {
-  //     console.log("adding to star")
-  //     this.setState({
-  //       star: this.state.star.concat([myUrl])
-  //     })
-  //   }
-  //   console.log(this.state.star)
-  // }
   handleStar(myUrl) {
     this.setState(prevState => {
       let index = prevState.star.indexOf(myUrl)
       if (index > -1) {
         console.log("remove")
-        // return {
-        //   star: prevState.star
-        //     .slice(0, i)
-        //     .concat(prevState.star.slice(i + 1, prevState.star.length))
-        // }
         return {
           star: prevState.star.filter((_, i) => i !== index)
         }

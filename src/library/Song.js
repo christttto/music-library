@@ -49,10 +49,7 @@ function Song(props) {
         className="star"
         style={myStar()}
         onClick={() => {
-          //myClick(props.track.url)
-          //here, after unstar, need to re-assign style value
           props.handleStar(props.track.url)
-          console.log("please")
         }}
       >
         ★

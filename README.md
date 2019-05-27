@@ -40,3 +40,5 @@ make on click, on change. Try to console out the url first.
 ### 4 search function
 
 ### 5 json call GET
+
+### 6 why at favorite, cannot unstar
