@@ -14,8 +14,8 @@ class List extends Component {
             if (
               this.props.star.includes(t.url) &&
               (this.props.keyword === "" ||
-                t.name.includes(this.props.keyword) ||
-                t.artist.name.includes(this.props.keyword))
+                t.name.toLowerCase().includes(this.props.keyword) ||
+                t.artist.name.toLowerCase().includes(this.props.keyword))
             ) {
               return (
                 <Song
@@ -36,8 +36,8 @@ class List extends Component {
           {this.props.tracksJson.map((t, index) => {
             if (
               this.props.keyword === "" ||
-              t.name.includes(this.props.keyword) ||
-              t.artist.name.includes(this.props.keyword)
+              t.name.toLowerCase().includes(this.props.keyword) ||
+              t.artist.name.toLowerCase().includes(this.props.keyword)
             ) {
               return (
                 <Song

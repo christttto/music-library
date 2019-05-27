@@ -14,7 +14,7 @@ class Search extends Component {
             type="text"
             name="keyword"
             placeholder="search"
-            value={this.props.keyword}
+            value={this.props.keyword.toLowerCase()}
             onChange={this.props.handleSubmit}
           />
           <button>search</button>
