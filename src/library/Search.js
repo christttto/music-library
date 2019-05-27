@@ -1,24 +1,21 @@
 import React, { Component } from "react"
 
 class Search extends Component {
-  handleSubmit(event) {
-    event.preventDefault()
-    console.log(event)
-  }
-  handleChange(event) {
-    const { name, value } = event.target
-    this.props.setState({ [name]: value })
-  }
+  //   handleSubmit(event) {
+  //     event.preventDefault()
+  //     console.log("search handleSubmit called")
+  //     this.props.handleChange(event)
+  //   }
   render() {
     return (
       <div>
-        <form className="" onSubmit={this.handleSubmit}>
+        <form className="search-form" onSubmit={this.props.handleSubmit}>
           <input
             type="text"
             name="keyword"
             placeholder="search"
             value={this.props.keyword}
-            onChange={this.handleChange}
+            onChange={this.props.handleSubmit}
           />
           <button>search</button>
         </form>

@@ -22,7 +22,8 @@ class App extends Component {
       ]
     }
     this.handleStar = this.handleStar.bind(this)
-    this.handleChange = this.handleChange.bind(this)
+    this.handleSubmit = this.handleSubmit.bind(this)
+    //this.handleChange = this.handleChange.bind(this)
   }
   //bringing json
   componentDidMount() {
@@ -57,18 +58,19 @@ class App extends Component {
     }
     console.log(this.state.star)
   }
-  handleSubmit(myKeyword) {
-    console.log("called handleSubmit in app")
-  }
-  handleChange(event) {
+  handleSubmit(event) {
     const { name, value } = event.target
-    this.props.setState({ [name]: value })
+    this.setState({ [name]: value })
   }
+  // handleChange(event) {
+  //   const { name, value } = event.target
+  //   this.setState({ [name]: value })
+  // }
   render() {
     return (
       <div className="App">
         App.js is here
-        <Search keyword={this.state.keyword} setState={this.setState} />
+        <Search keyword={this.state.keyword} handleSubmit={this.handleSubmit} />
         <div>
           <span className="List">
             {/**filter */}
