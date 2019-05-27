@@ -1,0 +1,14 @@
+header {
+  height: 80px;
+  display: flex;
+  align-items: center;
+  background: #2c98f0;
+}
+h1 {
+  padding: 30px;
+  color: aliceblue;
+  font-style: italic;
+}
+#o {
+  color: #e95f26;
+}

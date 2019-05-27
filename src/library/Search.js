@@ -1,5 +1,6 @@
 import React, { Component } from "react"
-
+import Button from "@material-ui/core/Button"
+import Input from "@material-ui/core/Input"
 class Search extends Component {
   //   handleSubmit(event) {
   //     event.preventDefault()
@@ -8,16 +9,16 @@ class Search extends Component {
   //   }
   render() {
     return (
-      <div>
+      <div className="Search">
         <form className="search-form" onSubmit={this.props.handleSubmit}>
-          <input
+          <Input
             type="text"
             name="keyword"
             placeholder="search"
             value={this.props.keyword.toLowerCase()}
             onChange={this.props.handleSubmit}
           />
-          <button>go</button>
+          <Button>go</Button>
         </form>
       </div>
     )

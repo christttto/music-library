@@ -1,10 +1,18 @@
 .App {
   text-align: center;
+  background: linear-gradient(
+      125.42deg,
+      #528dff 0%,
+      rgba(255, 255, 255, 0) 100%
+    ),
+    #00744a;
+  background-attachment: fixed;
 }
 
 div {
   margin: 0;
   padding: 0;
+  font-size: 20px;
 }
 span {
   vertical-align: top;
@@ -19,5 +27,17 @@ span {
 
 .List {
   display: inline-block;
-  width: 50%;
+  width: 45%;
+  text-align: left;
+  padding: 10px;
+  background: white;
+}
+
+.Song {
+  padding-top: 10px;
+  background: aqua;
+}
+
+.Search {
+  background: white;
 }

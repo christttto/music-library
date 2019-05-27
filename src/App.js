@@ -1,10 +1,8 @@
 import React, { Component } from "react"
 import List from "./library/List"
-
 import Search from "./library/Search"
+import Header from "./layout/Header"
 import "./App.css"
-
-import tracks from "./data/tracks.json"
 
 class App extends Component {
   constructor() {
@@ -12,7 +10,6 @@ class App extends Component {
     this.state = {
       //store json
       tracksJson: {},
-      tracksJsonFile: {},
 
       //keyword used for
       keyword: "",
@@ -31,21 +28,20 @@ class App extends Component {
       .then(response => response.json())
       .then(data => {
         this.setState({
-          tracksJson: data
+          tracksJson: data.tracks
         })
       })
-    this.setState({ tracksJsonFile: tracks })
   }
   handleStar(myUrl) {
     this.setState(prevState => {
       let index = prevState.star.indexOf(myUrl)
       if (index > -1) {
-        console.log("remove")
+        //remove
         return {
           star: prevState.star.filter((_, i) => i !== index)
         }
       } else {
-        console.log("add")
+        //add
         return {
           star: prevState.star.concat([myUrl])
         }
@@ -60,28 +56,30 @@ class App extends Component {
   render() {
     return (
       <div className="App">
-        App.js is here
+        <Header />
         <Search keyword={this.state.keyword} handleSubmit={this.handleSubmit} />
-        <div>
-          <span className="List">
-            <List
-              tracksJson={tracks.track}
-              star={this.state.star}
-              handleStar={this.handleStar}
-              keyword={this.state.keyword}
-              title="all"
-            />
-          </span>
-          <span className="List">
-            <List
-              tracksJson={tracks.track}
-              star={this.state.star}
-              handleStar={this.handleStar}
-              keyword={this.state.keyword}
-              title="star"
-            />
-          </span>
-        </div>
+        {this.state && this.state.tracksJson.track && (
+          <div>
+            <span className="List">
+              <List
+                tracksJson={this.state.tracksJson.track}
+                star={this.state.star}
+                handleStar={this.handleStar}
+                keyword={this.state.keyword}
+                title="all"
+              />
+            </span>
+            <span className="List">
+              <List
+                tracksJson={this.state.tracksJson.track}
+                star={this.state.star}
+                handleStar={this.handleStar}
+                keyword={this.state.keyword}
+                title="star"
+              />
+            </span>
+          </div>
+        )}
       </div>
     )
   }
