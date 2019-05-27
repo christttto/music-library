@@ -62,10 +62,7 @@ class App extends Component {
     const { name, value } = event.target
     this.setState({ [name]: value })
   }
-  // handleChange(event) {
-  //   const { name, value } = event.target
-  //   this.setState({ [name]: value })
-  // }
+
   render() {
     return (
       <div className="App">
@@ -73,7 +70,6 @@ class App extends Component {
         <Search keyword={this.state.keyword} handleSubmit={this.handleSubmit} />
         <div>
           <span className="List">
-            {/**filter */}
             <List
               tracksJson={tracks.track}
               star={this.state.star}
@@ -83,7 +79,6 @@ class App extends Component {
             />
           </span>
           <span className="List">
-            {/**filter */}
             <List
               tracksJson={tracks.track}
               star={this.state.star}
@@ -93,7 +88,6 @@ class App extends Component {
             />
           </span>
         </div>
-        <div>search bar</div>
       </div>
     )
   }

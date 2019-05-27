@@ -19,7 +19,6 @@ class Search extends Component {
           />
           <button>search</button>
         </form>
-        {this.props.keyword}
       </div>
     )
   }
