@@ -26,6 +26,7 @@ class List extends Component {
                 />
               )
             }
+            return null
           })}
         </div>
       )
@@ -48,6 +49,7 @@ class List extends Component {
                 />
               )
             }
+            return null
           })}
         </div>
       )

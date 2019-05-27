@@ -16,10 +16,7 @@ class App extends Component {
 
       //keyword used for
       keyword: "",
-      star: [
-        "https://www.last.fm/music/Ariana+Grande/_/7+rings",
-        "https://www.last.fm/music/Ariana+Grande/_/Thank+U,+Next"
-      ]
+      star: []
     }
     this.handleStar = this.handleStar.bind(this)
     this.handleSubmit = this.handleSubmit.bind(this)
@@ -48,7 +45,7 @@ class App extends Component {
       //myUrl exists
       console.log("removing from star")
       this.setState(prevState => {
-        star: prevState.star.splice(index, 1)
+        star: this.state.star.splice(index, 1)
       })
     } else {
       console.log("adding to star")

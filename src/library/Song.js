@@ -1,5 +1,4 @@
 import React from "react"
-import ReactStars from "react-stars"
 import "../App.css"
 function Song(props) {
   // let myValue = 0 //depends on the original value
@@ -43,9 +42,7 @@ function Song(props) {
       }
     }
   }
-  const myClick = myUrl => {
-    console.log(myUrl)
-  }
+
   return (
     <div className="all-list-song">
       <div
