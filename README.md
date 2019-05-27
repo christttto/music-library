@@ -1,10 +1,23 @@
-# Music Library
+# Allegro
 
-## Main Funcitons
+Hello! This readme will explain the structure of Allegro, a music library implemted using React.<br>
+Click this link to look at the application!<br>
+[Allegro](https://christttto.github.io/music-library/)<br>
+
+## Main Requirements
+
+1. Ability to scroll through all the songs
+2. Ability to star a song (unstar)
+3. Access to a seperate list with only the starred songs
+4. Ability to search for a song
 
 ### User to scroll through the songs
 
+The User must be able to look at all of the songs.<br>
+
 ### Showing all the songs that have been "starred."
+
+There needs to be a seperate list that will show all songs user has seleted.<br>
 
 ## Available Scripts
 
