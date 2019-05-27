@@ -15,7 +15,7 @@ class App extends Component {
       tracksJsonFile: {},
 
       //keyword used for
-      keyword: "rock",
+      keyword: "",
       star: [
         "https://www.last.fm/music/Ariana+Grande/_/7+rings",
         "https://www.last.fm/music/Ariana+Grande/_/Thank+U,+Next"
