@@ -15,12 +15,13 @@ class App extends Component {
       tracksJsonFile: {},
 
       //keyword used for
-      filter: "",
+      keyword: "rock",
       star: [
         "https://www.last.fm/music/Ariana+Grande/_/7+rings",
         "https://www.last.fm/music/Ariana+Grande/_/Thank+U,+Next"
       ]
     }
+    this.handleStar = this.handleStar.bind(this)
     this.handleChange = this.handleChange.bind(this)
   }
   //bringing json
@@ -38,7 +39,7 @@ class App extends Component {
       })
     this.setState({ tracksJsonFile: tracks })
   }
-  handleChange(myUrl) {
+  handleStar(myUrl) {
     console.log("app handlechange")
     console.log(myUrl)
     let index = this.state.star.indexOf(myUrl)
@@ -56,18 +57,25 @@ class App extends Component {
     }
     console.log(this.state.star)
   }
+  handleSubmit(myKeyword) {
+    console.log("called handleSubmit in app")
+  }
+  handleChange(event) {
+    const { name, value } = event.target
+    this.props.setState({ [name]: value })
+  }
   render() {
     return (
       <div className="App">
         App.js is here
-        <Search />
+        <Search keyword={this.state.keyword} setState={this.setState} />
         <div>
           <span className="List">
             {/**filter */}
             <List
               tracksJson={tracks.track}
               star={this.state.star}
-              handleChange={this.handleChange}
+              handleStar={this.handleStar}
             />
           </span>
           <span className="List">
@@ -75,7 +83,7 @@ class App extends Component {
             <ListStar
               tracksJson={tracks.track}
               star={this.state.star}
-              handleChange={this.handleChange}
+              handleStar={this.handleStar}
             />
           </span>
         </div>

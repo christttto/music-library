@@ -15,7 +15,7 @@ class List extends Component {
               track={t}
               key={index}
               star={this.props.star}
-              handleChange={this.props.handleChange}
+              handleStar={this.props.handleStar}
             />
           )
         })}
