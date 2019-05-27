@@ -11,17 +11,14 @@ Click this link to look at the application!<br>
 3. Access to a seperate list with only the starred songs
 4. Ability to search for a song
 
-### User to scroll through the songs
+## Solution
 
-The User must be able to look at all of the songs.<br>
-
-### Showing all the songs that have been "starred."
-
-There needs to be a seperate list that will show all songs user has seleted.<br>
-
-## Available Scripts
-
-In the project directory, you can run:
+1. Provide a list that will be populated using data from json
+2. Provide a blank star for user to click to star a song
+   1. Starred song will have active star next to it, to indicate that the song is starred
+   2. Clicking an active star will unstar a song
+3. Populate a list with songs that has been saved as star
+4. When populating a list, use json data that matches the keyword that has been entered
 
 ### `npm start`
 
