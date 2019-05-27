@@ -9,7 +9,7 @@ class List extends Component {
     if (this.props.title === "star") {
       return (
         <div>
-          list starts here
+          <div>{this.props.title}</div>
           {this.props.tracksJson.map((t, index) => {
             if (
               this.props.star.includes(t.url) &&
@@ -33,7 +33,7 @@ class List extends Component {
     } else {
       return (
         <div>
-          list starts here
+          <div>{this.props.title}</div>
           {this.props.tracksJson.map((t, index) => {
             if (
               this.props.keyword === "" ||

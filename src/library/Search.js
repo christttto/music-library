@@ -17,7 +17,7 @@ class Search extends Component {
             value={this.props.keyword.toLowerCase()}
             onChange={this.props.handleSubmit}
           />
-          <button>search</button>
+          <button>go</button>
         </form>
       </div>
     )
