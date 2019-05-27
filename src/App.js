@@ -78,6 +78,8 @@ class App extends Component {
               tracksJson={tracks.track}
               star={this.state.star}
               handleStar={this.handleStar}
+              keyword={this.state.keyword}
+              title="all"
             />
           </span>
           <span className="List">
@@ -86,6 +88,8 @@ class App extends Component {
               tracksJson={tracks.track}
               star={this.state.star}
               handleStar={this.handleStar}
+              keyword={this.state.keyword}
+              title="star"
             />
           </span>
         </div>
