@@ -35,7 +35,10 @@ span {
   opacity: 0.9;
   margin: 10px;
 }
-
+.link {
+  text-decoration: none;
+  color: black;
+}
 .Song {
   margin-bottom: 5px;
   margin-right: 5px;
