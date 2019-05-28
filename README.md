@@ -21,6 +21,7 @@ Click this link to look at the application<br>
    2. Clicking an active star will unstar a song
 3. Populate a list with songs that has been saved as star
 4. When populating a list, use json data that matches the keyword that has been entered
+5. Using the url provided from json, each song's title also is a link to the song itself in last.fm
 
 ## Structure
 

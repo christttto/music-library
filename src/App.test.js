@@ -3,9 +3,9 @@ import ReactDOM from "react-dom"
 import App from "./App"
 import { exportAllDeclaration } from "@babel/types"
 
-import List from "./library/List"
-import Song from "./library/Song"
-import Search from "./library/Search"
+import List from "./component/List"
+import Song from "./component/Song"
+import Search from "./component/Search"
 
 it("renders without crashing", () => {
   const div = document.createElement("div")

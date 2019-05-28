@@ -1,6 +1,6 @@
 import React, { Component } from "react"
-import List from "./library/List"
-import Search from "./library/Search"
+import List from "./component/List"
+import Search from "./component/Search"
 import Header from "./layout/Header"
 import "./App.css"
 
@@ -60,7 +60,7 @@ class App extends Component {
   render() {
     return (
       <div className="App">
-        <Header />
+        <Header className="" />
         <Search keyword={this.state.keyword} handleSubmit={this.handleSubmit} />
         {this.state && this.state.tracksJson.track && (
           <div>

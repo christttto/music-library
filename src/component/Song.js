@@ -36,8 +36,8 @@ function Song(props) {
         target="_blank"
         rel="noopener noreferrer"
       >
-        <span>{props.track.name} - </span>
-        <span>{props.track.artist.name}</span>
+        <span>{props.track.name}</span>
+        <span> - {props.track.artist.name}</span>
       </a>
     </div>
   )
