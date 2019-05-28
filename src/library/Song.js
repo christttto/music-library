@@ -30,7 +30,12 @@ function Song(props) {
         src={props.track.image[0]["#text"]}
         alt="album"
       />
-      <a className="link" href={props.track.url} target="_blank">
+      <a
+        className="link"
+        href={props.track.url}
+        target="_blank"
+        rel="noopener noreferrer"
+      >
         <span>{props.track.name} - </span>
         <span>{props.track.artist.name}</span>
       </a>
