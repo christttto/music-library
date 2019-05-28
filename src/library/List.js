@@ -5,12 +5,11 @@ import "../App.css"
 
 class List extends Component {
   render() {
-    //need to take care of keyword
-
+    //if the list is for star
     if (this.props.title === "star") {
       return (
         <div>
-          <div className="title">{this.props.title}</div>
+          <div className="title">{this.props.title.toUpperCase()}</div>
           {this.props.tracksJson.map((t, index) => {
             if (
               this.props.star.includes(t.url) &&
@@ -31,10 +30,12 @@ class List extends Component {
           })}
         </div>
       )
-    } else {
+    }
+    //if list is for general purpose, which is all
+    else {
       return (
         <div>
-          <div className="title">{this.props.title}</div>
+          <div className="title">{this.props.title.toUpperCase()}</div>
           {this.props.tracksJson.map((t, index) => {
             if (
               this.props.keyword === "" ||
