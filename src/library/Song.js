@@ -25,7 +25,11 @@ function Song(props) {
         ★
       </span>
 
-      <img src={props.track.image[0]["#text"]} alt="album" />
+      <img
+        className="album-art"
+        src={props.track.image[0]["#text"]}
+        alt="album"
+      />
       <span>{props.track.name} - </span>
       <span>{props.track.artist.name}</span>
     </div>

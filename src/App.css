@@ -12,15 +12,19 @@ span {
 }
 .star {
   display: inline;
+  margin-right: 5px;
 }
-
+.album-art {
+  margin-right: 10px;
+}
 .track-name {
   color: brown;
 }
 .title {
   text-align: center;
-  font-size: 20px;
+  font-size: 25px;
   margin: 10px;
+  font-weight: bold;
 }
 .List {
   display: inline-block;
@@ -34,6 +38,7 @@ span {
 
 .Song {
   margin-bottom: 5px;
+  margin-right: 5px;
   padding: 5px;
   background: #aacaff;
   align-items: center;
