@@ -2,7 +2,8 @@
 
 ![alt Allegro-landing.png](./readme-material/Allegro-landing.png "Allegro-landing")
 Hello! This readme will explain the structure of Allegro, a music library implemted using React.<br>
-Click this link to look at the application!<br>
+<br>
+Click this link to look at the application<br>
 [Allegro](https://christttto.github.io/music-library/)<br>
 
 ## Main Requirements
@@ -33,9 +34,10 @@ Search component will return the keyword state of App component, which will be s
 
 1. Refacotring List component. As playlist extends, it will be better to take in parameter from parent, and simply map at List level.
 2. Implement using Clojure Script!
-3. Utilize muid of json, which was empty.
+3. Utilize muid of json, which was empty.(using url as id of a song)
 
-### `npm start`
+## Run It Locally
 
 Runs the app in the development mode.<br>
+`npm start`
 Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
