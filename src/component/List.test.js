@@ -3,7 +3,7 @@ import { shallow } from "enzyme"
 import List from "./List"
 import { isTSAnyKeyword, exportAllDeclaration } from "@babel/types"
 
-describe("Header Component", () => {
+describe("List Component", () => {
   it("It should render without errrors", () => {
     expect(1).toBe(1)
   })

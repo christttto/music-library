@@ -30,6 +30,7 @@ App component will house List components and Search component.
 List component will take in title, trackJson, array of stars, search keyword, and functions to call when changes have been made.  
 Song component will take in mapped trackJson, and use the song name, artist name, and based on the array of star, conditionally render star to be in color or not.  
 Search component will return the keyword state of App component, which will be sent down to list to conditionally map Song depending on the keyword.
+Song component will render song name and artist name as ancher tag, to provide a link to the song.
 
 ## Improvements
 
